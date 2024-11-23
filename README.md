@@ -1,12 +1,26 @@
 # Advent of Code Solutions
 
-WIP: This will be the main repo for all python solutions. I have some other repos for past years that I'll work to merge in.
+Main repo for Advent of Code solutions in Python
+
+## Years
+
+[2024](#2024) - Not Started
+
+[2023](#2023) - In Progress
+
+[2022](#2022) - In Progress
 
 ## 2024
 
+<details open>
+
 Coming soon!
 
+</details>
+
 ## 2023
+
+<details>
 
 [Day 01](/2023/day01.py) - Part 1 & 2
 
@@ -15,3 +29,19 @@ Coming soon!
 Day 03
 
 [Day 04](/2023/day04.py) - Part 1
+
+</details>
+
+## 2022
+
+<details>
+
+[Day 01](/2022/day01.py) - Part 1 & 2
+
+[Day 02](/2022/day02.py) - Part 1 & 2
+
+[Day 03](/2022/day02.py) - Part 1 & 2
+
+[Day 04](/2022/day04.py) - Part 1
+
+</details>
