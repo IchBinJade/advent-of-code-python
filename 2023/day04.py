@@ -14,7 +14,6 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 from utils import get_list_from_file
 
 def parse_card(line):
-    #card_re = r"/Card\s+\d+:\s+([\d\s]+)\s+\|\s+([\d\s]+)/"
     card_re = r"Card\s+\d+:\s+([\d\s]+)\s+\|\s+([\d\s]+)"
     match = re.search(card_re, line)
 
