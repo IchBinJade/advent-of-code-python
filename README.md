@@ -12,9 +12,15 @@ Main repo for Advent of Code solutions in Python
 
 ## 2024
 
+<details open>
+
 Coming soon!
 
+</details>
+
 ## 2023
+
+<details>
 
 [Day 01](/2023/day01.py) - Part 1 & 2
 
@@ -24,7 +30,11 @@ Day 03
 
 [Day 04](/2023/day04.py) - Part 1
 
+</details>
+
 ## 2022
+
+<details>
 
 [Day 01](/2022/day01.py) - Part 1 & 2
 
@@ -33,3 +43,5 @@ Day 03
 [Day 03](/2022/day02.py) - Part 1 & 2
 
 [Day 04](/2022/day04.py) - Part 1
+
+</details>
