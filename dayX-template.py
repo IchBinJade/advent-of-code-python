@@ -1,7 +1,7 @@
 """
 Author: IchBinJade
 Date  : YYYY-MM-DD
-AoC Day X - https://adventofcode.com/20YY/day/X
+AoC YYYY Day X - https://adventofcode.com/20YY/day/X
 """
 
 import sys

@@ -10,7 +10,7 @@ Main repo for Advent of Code solutions in Python
 
 [2022](#2022) - In Progress
 
-[2021](#2021) - Not Started
+[2021](#2021) - In Progress
 
 [2020](#2020) - (Barely) In Progress
 
@@ -52,7 +52,13 @@ Day 03
 
 ## 2021
 
-Coming soon!
+<details>
+
+[Day 01](/2021/day01.py) - Part 1 & 2
+
+[Day 02](/2021/day02.py) - Part 1 & 2
+
+</details>
 
 ## 2020
 
