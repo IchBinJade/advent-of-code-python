@@ -42,36 +42,31 @@ def get_number_list(input):
             number = int(match.group(0))
             numbers_pos.append((number, row, start_pos, end_pos))
 
-        # for char_pos in range(len(input[row])):
-        #     if input[row][char_pos].isdigit():
-        #         number, start_pos, end_pos = extract_whole_num(row, char_pos, input)
-        #         if number is not None:
-        #             numbers_pos.append((number, row, start_pos, end_pos))
-
     return numbers_pos
+
+
+def is_adjacent_to_symbol(input, num_coord):
+    # Check neighbours of current num coord and return boolean
+    row, col = num_coord
+    for nx, ny in NEIGHBOURS:
+        nrow = row + nx
+        ncol = col + ny
+        if 0 <= nrow < len(input) and 0 <= ncol < len(input[nrow]):
+            if re.match(SYMBOLS, input[nrow][ncol]):
+                return True
+    
+    return False
 
 
 def part_one(input):
     total = 0
-    counted_pos = set()
     numbers_pos = get_number_list(input)
-    # Check for symbols adjacent to each number
     for number, row, start_pos, end_pos in numbers_pos:
         for col in range(start_pos, end_pos + 1):
-            for x, y in NEIGHBOURS:
-                    nb_row, nb_col = row + x, col + y
-                    # Check neighbour within bounds
-                    if 0 <= nb_row < len(input) and 0 <= nb_col < len(input[nb_row]):
-                            # Debugging: Show position of current neighbour being checked
-                            # print(f"counted_pos content = {counted_pos}")
-                            # print(f"Checking neighbour at ({nb_row}, {nb_col}) for number {number}")
-                            # print(f"neighbour content = {input[nb_row][nb_col]}")
-                        if re.match(SYMBOLS, input[nb_row][nb_col]) and (number, start_pos, end_pos) not in counted_pos:
-                            total += number
-                            counted_pos.add((number, start_pos, end_pos))
-                            #counted_pos.add((nb_row, nb_col))
-                            #print(f"Adding number {number} due to symbol at ({nb_row}, {nb_col})")
-                            break  # Once a valid symbol is found, we can stop checking further neighbours
+            if is_adjacent_to_symbol(input, (row, col)):
+                total += number
+                print(f"Added number {number}")
+                break # don't need to check further once added
 
     return total
 
