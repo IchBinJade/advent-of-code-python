@@ -58,6 +58,8 @@ Coming soon!
 
 [Day 02](/2021/day02.py) - Part 1 & 2
 
+[Day 03](/2021/day03.py) - Part 1
+
 </details>
 
 ## 2020
