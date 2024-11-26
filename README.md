@@ -6,13 +6,13 @@ Main repo for Advent of Code solutions in Python
 
 [2024](#2024) - Not Started
 
-[2023](#2023) - In Progress
+[2023](#2023) - In Progress (4/25)
 
-[2022](#2022) - In Progress
+[2022](#2022) - In Progress (3.5/25)
 
-[2021](#2021) - In Progress
+[2021](#2021) - In Progress (2.5/25)
 
-[2020](#2020) - (Barely) In Progress
+[2020](#2020) - In Progress (1/25)
 
 ## 2024
 
@@ -24,7 +24,7 @@ Coming soon!
 
 ## 2023
 
-<details>
+<details open>
 
 [Day 01](/2023/day01.py) - Part 1 & 2
 
@@ -32,7 +32,7 @@ Coming soon!
 
 [Day 03](/2023/day03.py) - Part 1 & 2
 
-[Day 04](/2023/day04.py) - Part 1
+[Day 04](/2023/day04.py) - Part 1 & 2
 
 </details>
 
