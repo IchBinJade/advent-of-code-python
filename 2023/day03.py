@@ -15,20 +15,25 @@ from utils import get_list_from_file
 
 DIGITS = r"\d+"
 SYMBOLS = r"[^.\d]"
+GEAR = r"\*"
 NEIGHBOURS = [(-1, -1), (-1, 0), (-1, 1), (0, -1), (0, 1), (1, -1), (1, 0), (1, 1)]
 
 def extract_whole_num(row, char_pos, input):
-    # Save start pos to get end pos later
-    start_pos = char_pos
+    orig_pos = char_pos
     number_str = ""
-    # Keep shifting along until we stop getting a digit
-    while char_pos < len(input[row]) and input[row][char_pos].isdigit():
-        number_str += input[row][char_pos]
+    # Check backwards in case this isn't the start of the number
+    while char_pos >= 0 and input[row][char_pos].isdigit():
+        number_str = input[row][char_pos] + number_str
+        char_pos -= 1
+
+    # Check forwards now backwards is done
+    char_pos = orig_pos
+    while char_pos + 1 < len(input[row]) and input[row][char_pos + 1].isdigit():
+        number_str += input[row][char_pos + 1]
         char_pos += 1
 
     if number_str:
-        end_pos = char_pos - 1
-        return int(number_str), start_pos, end_pos
+        return int(number_str)
     
     return None
 
@@ -43,6 +48,16 @@ def get_number_list(input):
             numbers_pos.append((number, row, start_pos, end_pos))
 
     return numbers_pos
+
+
+def get_gear_list(input):
+    gears_pos = []
+    for row in range(len(input)):
+        for match in re.finditer(GEAR, input[row]):
+            col = match.start(0)
+            gears_pos.append((row, col))
+
+    return gears_pos
 
 
 def is_adjacent_to_symbol(input, num_coord):
@@ -65,14 +80,33 @@ def part_one(input):
         for col in range(start_pos, end_pos + 1):
             if is_adjacent_to_symbol(input, (row, col)):
                 total += number
-                print(f"Added number {number}")
                 break # don't need to check further once added
 
     return total
 
 
 def part_two(input):
-    pass
+    total = 0
+    gears_list = get_gear_list(input)
+    visited_coords = set()
+    
+    for gear_row, gear_col in gears_list:
+        part_nums = []
+        for nx, ny in NEIGHBOURS:
+            nrow = gear_row + nx
+            ncol = gear_col + ny
+            if 0 <= nrow < len(input) and 0 <= ncol < len(input[nrow]):
+                if input[nrow][ncol].isdigit() and (nrow, ncol) not in visited_coords:
+                    part = extract_whole_num(nrow, ncol, input)
+                    if part and part not in part_nums:
+                        part_nums.append(part)
+                        visited_coords.add((nrow, ncol))
+        
+        if len(part_nums) == 2:
+            gear_ratio = part_nums[0] * part_nums[1]
+            total += gear_ratio              
+    
+    return total
 
 
 

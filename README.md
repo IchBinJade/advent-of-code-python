@@ -30,7 +30,7 @@ Coming soon!
 
 [Day 02](/2023/day02.py) - Part 1 & 2
 
-[Day 03](/2023/day03.py) - Part 1
+[Day 03](/2023/day03.py) - Part 1 & 2
 
 [Day 04](/2023/day04.py) - Part 1
 
