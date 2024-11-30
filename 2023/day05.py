@@ -1,7 +1,7 @@
 """
 Author: IchBinJade
-Date  : YYYY-MM-DD
-AoC YYYY Day X - https://adventofcode.com/20YY/day/X
+Date  : 2024-11-27
+AoC 2023 Day 5 - https://adventofcode.com/2023/day/5
 """
 
 import sys
@@ -13,7 +13,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 from utils import get_list_from_file
 
 def part_one(data_input):
-    pass
+    # Create an object class for the input?
+    maps = [line for line in data_input if line]
+    seeds = [seed for seed in maps[0].split() if seed.isdigit()]
+    print(f"seeds >>> {seeds}")
+    return maps
 
 
 def part_two(data_input):
@@ -25,7 +29,7 @@ if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
-    input_data = get_list_from_file(1, 2023)
+    input_data = get_list_from_file(5, 2023)
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
