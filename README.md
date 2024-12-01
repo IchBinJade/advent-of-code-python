@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - Not Started
+[2024](#2024) - In Progress
 
 [2023](#2023) - In Progress (4/25)
 
@@ -18,7 +18,7 @@ Main repo for Advent of Code solutions in Python
 
 <details open>
 
-Coming soon!
+[Day 01](/2024/day01.py) - Part 1 & 2
 
 </details>
 
