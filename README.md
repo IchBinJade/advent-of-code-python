@@ -18,7 +18,7 @@ Main repo for Advent of Code solutions in Python
 
 <details open>
 
-[Day 01](/2024/day01py) - Part 1 & 2
+[Day 01](/2024/day01.py) - Part 1 & 2
 
 </details>
 
