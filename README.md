@@ -4,15 +4,15 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress
+[2024](#2024) - In Progress (2/25)
 
-[2023](#2023) - In Progress
+[2023](#2023) - In Progress (5/25)
 
-[2022](#2022) - In Progress
+[2022](#2022) - In Progress (3.5/25)
 
-[2021](#2021) - In Progress
+[2021](#2021) - In Progress (2.5/25)
 
-[2020](#2020) - (Barely) In Progress
+[2020](#2020) - In Progress (1/25)
 
 ## 2024
 
@@ -20,11 +20,13 @@ Main repo for Advent of Code solutions in Python
 
 [Day 01](/2024/day01.py) - Part 1 & 2
 
+[Day 02](/2024/day02.py) - Part 1 & 2
+
 </details>
 
 ## 2023
 
-<details>
+<details open>
 
 [Day 01](/2023/day01.py) - Part 1 & 2
 
@@ -32,7 +34,13 @@ Main repo for Advent of Code solutions in Python
 
 [Day 03](/2023/day03.py) - Part 1 & 2
 
-[Day 04](/2023/day04.py) - Part 1
+[Day 04](/2023/day04.py) - Part 1 & 2
+
+[Day 05](/2023/day05.py) - In Progress
+
+[Day 06](/2023/day06.py) - Part 1 & 2
+
+[Day 07](/2023/day07.py) - In Progress
 
 </details>
 

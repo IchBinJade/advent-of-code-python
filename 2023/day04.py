@@ -1,6 +1,6 @@
 """
 Author: IchBinJade
-Date  : 2024-11-23
+Date  : 2024-11-26
 AoC Day 4 - https://adventofcode.com/2023/day/4
 """
 
@@ -26,31 +26,53 @@ def parse_card(line):
         return None
 
 
+def calc_matches(card_line):
+    winning_numbers = card_line["winning_numbers"]
+    chosen_numbers = card_line["chosen_numbers"]
+    card_match = 0
+    
+    # Create sets and find intersection
+    winning_set = set(winning_numbers)
+    chosen_set = set(chosen_numbers)
+    real_set = winning_set.intersection(chosen_set)
+    card_match = len(real_set)
+
+    return card_match
+
+
 def part_one(input):
     total = 0
-    # Loop list, get cards
     for line in input:
         card = parse_card(line)
         if card:
-            winning_numbers = card["winning_numbers"]
-            chosen_numbers = card["chosen_numbers"]
-
             card_points = 0
-            # Create sets and find intersection
-            winning_set = set(winning_numbers)
-            chosen_set = set(chosen_numbers)
-            real_set = winning_set.intersection(chosen_set)
-            # Loop intersection and calc points
-            for _ in real_set:
+            matches = calc_matches(card)
+            for _ in range(matches):
                 card_points = 1 if card_points == 0 else card_points * 2
             total += card_points
 
     return total
 
 
-def part_two(input):
-    pass
+def part_two(data):
+    total = 0
 
+    # Initialise a dict of card refs and their copy count
+    card_copies = {c_id + 1: 1 for c_id, _ in enumerate(data)}
+
+    # Loop input, find matches, loop copies and increment next refs
+    for card_idx, line in enumerate(data):
+        card_ref = card_idx + 1
+        card = parse_card(line)
+        if card:
+            matches = calc_matches(card)
+            no_of_copies = card_copies[card_ref]
+            for copy in range(no_of_copies):
+                for next_ref in range(card_ref + 1, card_ref + 1 + matches):
+                    if next_ref <= len(data): # Don't exceed input bounds
+                        card_copies[next_ref] += 1
+    
+    return sum(card_copies.values())
 
 
 if __name__ == "__main__":
