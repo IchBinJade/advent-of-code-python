@@ -14,6 +14,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 from utils import get_list_from_file
 
 MUL_MASK = r"mul\((\d+),(\d+)\)"
+DO_MASK = r"mul\(\d+,\d+\)|don't\(\)|do\(\)"
 
 def part_one(data_input):
     # Use regex to match "mul(#,#)" as a list of tuples then return the sum of their products
@@ -29,8 +30,26 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    # Get matches, including the do and don't combos to use as a flag
+    match_list = []
+    add_me = True # Line starts enabled
 
+    for line in data_input:
+        matches = re.findall(DO_MASK, line)
+        for match in matches:
+            # Set or check the flag
+            if match == "do()":
+                add_me = True
+            elif match == "don't()":
+                add_me = False
+            elif add_me and match.startswith("mul"): # Ignore other tuples of numbers for they are false gods
+                # Extract the tuples and add to list
+                match_tuple = tuple([int(x) for x in match.strip("mul()").split(",")])
+                match_list.append(match_tuple)
+
+    total = sum(x * y for x, y in match_list)
+    
+    return total
 
 
 if __name__ == "__main__":
