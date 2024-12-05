@@ -24,6 +24,8 @@ Main repo for Advent of Code solutions in Python
 
 [Day 03](/2024/day03.py) - Part 1 & 2
 
+[Day 04](/2024/day04.py) - Part 1 & 2
+
 </details>
 
 ## 2023
