@@ -2,8 +2,6 @@
 Author: IchBinJade
 Date  : 2024-12-05
 AoC 2024 Day 5 - https://adventofcode.com/2024/day/5
-
-TODO: Complete part 2
 """
 
 import sys
@@ -14,8 +12,6 @@ import itertools
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
 from utils import get_list_from_file
-
-TEST_INPUT = ['47|53', '97|13', '97|61', '97|47', '75|29', '61|13', '75|53', '29|13', '97|29', '53|29', '61|53', '97|53', '61|29', '47|13', '75|47', '97|75', '47|61', '75|61', '47|29', '75|13', '53|13', '', '75,47,61,53,29', '97,61,53,29,13', '75,29,13', '75,97,47,61,53', '61,13,29', '97,13,75,29,47']
 
 def is_order_valid(instruction, rules):
     """ 
@@ -53,6 +49,24 @@ def find_valid_order(instruction, rules):
     return None  # Return None if no valid ordering is found
 
 
+def sort_me(instruction, rules):
+    i = 0
+    while i != len(instruction):
+        i = len(instruction)
+        for rule in rules:
+            A, B = rule[0], rule[1]
+            # Value check
+            if A not in instruction or B not in instruction:
+                continue
+            first_page = instruction.index(A)
+            second_page = instruction.index(B)
+            if first_page > second_page:
+                i -= 1
+                instruction.pop(first_page)
+                instruction.insert(second_page, A)
+
+    return instruction
+
 def part_one(data_input):
     count = 0
     valid_instructions = []
@@ -83,18 +97,15 @@ def part_two(data_input):
         if not is_order_valid(instruction, rules):
             count += 1
             invalid_instructions.append(instruction)
-
-    print(f"invalid_instructions >>> {invalid_instructions}")
  
+    # Loop the invalid instructions to get the correct orders
     ordered_instructions = []
     for instruction in invalid_instructions:
-        ordered_instruction = find_valid_order(instruction, rules)
+        ordered_instruction = sort_me(instruction, rules)
         if ordered_instruction:
             ordered_instructions.append(ordered_instruction)
 
-    print(f"ordered instructions >>> {ordered_instructions}")
-    # Return the same sum as part_one but for invalid_instructions instead of valid_instructions
-    return sum([instruction[len(instruction) // 2] for instruction in ordered_instructions])
+    return sum([instruction[len(instruction) // 2] for instruction in invalid_instructions])
 
 
 
@@ -103,8 +114,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(5, 2024)
-
-    input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
