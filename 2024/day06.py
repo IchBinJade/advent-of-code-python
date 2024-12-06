@@ -53,16 +53,6 @@ def find_looped_route(start_pos, next_row, next_col, grid):
             return True
 
 
-def get_empty_steps(grid):
-    empty_steps = []
-    for row_idx, row in enumerate(grid):
-        for col_idx, step in enumerate(row):
-            if step == ".":
-                empty_steps.append((row_idx, col_idx))
-
-    return empty_steps
-
-
 def part_one(data_input):
     total = 0
     visited = set()
