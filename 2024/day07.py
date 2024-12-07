@@ -45,11 +45,10 @@ def solve_expression(num_list, target, use_concat):
 def part_one(data_input):
     count = 0
     for line in data_input:
-        #print(f"line >>> {line}")
         desired_result, *nums_to_use = line.split(": ")
         desired_result = int(desired_result)
         nums_list = list(map(int, nums_to_use[0].split()))
-        #print(f"desired = {desired_result}; nums_to_use = {nums_list}")
+        
         if solve_expression(nums_list, desired_result, use_concat=False):
             count += solve_expression(nums_list, desired_result, use_concat=False)
     
@@ -59,11 +58,10 @@ def part_one(data_input):
 def part_two(data_input):
     count = 0
     for line in data_input:
-        #print(f"line >>> {line}")
         desired_result, *nums_to_use = line.split(": ")
         desired_result = int(desired_result)
         nums_list = list(map(int, nums_to_use[0].split()))
-        #print(f"desired = {desired_result}; nums_to_use = {nums_list}")
+        
         if solve_expression(nums_list, desired_result, use_concat=True):
             count += solve_expression(nums_list, desired_result, use_concat=True)
     
