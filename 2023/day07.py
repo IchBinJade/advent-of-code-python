@@ -1,7 +1,12 @@
 """
 Author: IchBinJade
-Date  : 2024-12-02
+Date  : 2024-12-07
 AoC 2023 Day 7 - https://adventofcode.com/2023/day/7
+
+Helpful note (thanks @hyper-neutrino):
+------------
+
+Visit https://www.asciitable.com/ for character precedence
 """
 
 import sys
@@ -14,104 +19,115 @@ from utils import get_list_from_file
 from collections import Counter
 
 HAND_RANKINGS = {"Five": 6, "Four": 5, "Full": 4, "Three": 3, "Two": 2, "One": 1, "High": 0}
-CARD_RANKINGS = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "T": 10, "J": 11, "Q": 12, "K": 13, "A": 14}
+CARD_MAPPINGS = {"T": "A", "J": "B", "Q": "C", "K": "D", "A": "E"}
+JOKER_MAPPINGS = {"T": "A", "J": "*", "Q": "C", "K": "D", "A": "E"}
 
-TEST_INPUT = ["32T3K 765", "T55J5 684", "KK677 28", "KTJJT 220", "QQQJA 483"]
+def get_hand_strength(hand):
+    # Get a list of counts for each value
+    counts = [hand.count(card) for card in hand]
 
-class CamelCard:
-    def __init__(self, value):
-        self.value = value
-        # rank for the tie breaker?
-        self.card_rank = CARD_RANKINGS[value]
-
-    def __str__(self):
-        debug_card_str = f"Card: {self.value}, rank={self.card_rank} ; "
-        card_str = self.value
-        return self.value
-
-
-class CamelHand:
-    def __init__(self, hand):
-        self.hand = [CamelCard(value) for value in hand]
-        self.card_ranks = sorted([card.card_rank for card in self.hand], reverse=True)
-
-    def __str__(self):
-        hand_str = ''.join(str(card) for card in self.hand)
-        #hand_strength_str = ', '.join(str(score) for score in self.get_hand_strength())
-        #return_str = f"Current Hand: {[hand_str]}; Current hand ranking: {self.card_ranks}; Current hand strength: {self.get_hand_strength()}"
-        return hand_str
-
-    # Calc hand strength
-    def organise_hand(self):
-        # Get a list of counts for each value
-        card_values = [card.value for card in self.hand]
-        counts = Counter(card_values)
-        count_values = sorted(counts.values(), reverse=True)
-
-        if 5 in count_values:
-            return HAND_RANKINGS["Five"]      # Five of a Kind
-        if 4 in count_values:
-            return HAND_RANKINGS["Four"]      # Four of a Kind
-        if 3 in count_values:
-            if 2 in count_values:
-                return HAND_RANKINGS["Full"]  # Full House
-            else:
-                return HAND_RANKINGS["Three"] # Three of a Kind
-        if count_values.count(2) == 4:
-            return HAND_RANKINGS["Two"]       # Two Pairs
-        if 2 in count_values:
-            return HAND_RANKINGS["One"]       # One Pair
+    if 5 in counts:
+        return HAND_RANKINGS["Five"]      # Five of a Kind
+    if 4 in counts:
+        return HAND_RANKINGS["Four"]      # Four of a Kind
+    if 3 in counts:
+        if 2 in counts:
+            return HAND_RANKINGS["Full"]  # Full House
         else:
-            return HAND_RANKINGS["High"]      # High card
+            return HAND_RANKINGS["Three"] # Three of a Kind
+    if counts.count(2) == 4:
+        return HAND_RANKINGS["Two"]       # Two Pairs
+    if 2 in counts:
+        return HAND_RANKINGS["One"]       # One Pair
+    else:
+        return HAND_RANKINGS["High"]      # High card
+    
+    return 0
 
-    def get_strength(self):
-        return (self.organise_hand(), self.card_ranks)
+def get_hand_strength_with_jokers(hand):
+    # Strip J's from the hand before checking counts. If count + no_of_j's makes up the hands, return hand rank
+    jokers_count = hand.count("J")
+    hand = [card for card in hand if card != "J"]
+    counts = sorted(Counter(hand).values(), reverse=True)
+    
+    # If no cards are left after removing jokers, treat as an empty hand
+    if not counts:
+        counts = [0]
+  
+    # Add jokers to the counts and check for hand rankings
+    if counts[0] + jokers_count == 5:
+        return HAND_RANKINGS["Five"]      # Five of a Kind
+    if counts[0] + jokers_count == 4:
+        return HAND_RANKINGS["Four"]      # Four of a Kind
+    if counts[0] + jokers_count == 3:
+        if len(counts) > 1 and counts[1] == 2:
+            return HAND_RANKINGS["Full"]  # Full House
+        return HAND_RANKINGS["Three"]     # Three of a Kind
+    if counts[0] + jokers_count == 3:
+        return HAND_RANKINGS["Three"]     # Three of a Kind (with jokers)
+    if counts[0] == 2 and (jokers_count > 0 or len(counts) > 1 and counts[1] == 2):
+        return HAND_RANKINGS["Two"]       # Two Pairs (with jokers)
+    if counts[0] == 2 or jokers_count:
+        return HAND_RANKINGS["One"]       # One Pair (with jokers)
+    else:
+        return HAND_RANKINGS["High"]      # High card (with jokers)
+    
+    return 0
+            
+def organise_hand(hand):
+    # Get hand strength first
+    typed_hand = get_hand_strength(hand)
+    # Then organise by card strength
+    card_rank = [CARD_MAPPINGS.get(card, card) for card in hand]
+    
+    return (typed_hand, card_rank)
 
-    def tie_break(self, other_hand):
-        for self_card, other_card in zip(self.card_ranks, other_hand.card_ranks):
-            if self_card > other_card:
-                return True  # Self hand is stronger
-            elif self_card < other_card:
-                return False  # Other hand is stronger
-        return False
-        
+
+def organise_hand_with_jokers(hand):
+    # Change how "J"s are mapped, using *
+    typed_hand =  get_hand_strength_with_jokers(hand)
+    card_rank = [JOKER_MAPPINGS.get(card, card) for card in hand]
+    return (typed_hand, card_rank)
+
 
 def part_one(data_input):
+    total = 0
     hands_list = []
-    rank_list = []
 
-    # Parse lines and create CamelHand objects
+    # Get list of tuples of the hand, bid combo
     for line in data_input:
-        raw_hand, bid = line.split(" ")
-        hand = CamelHand(raw_hand)
-        hands_list.append((hand, hand.organise_hand(), int(bid)))
-
-        #print(hands_list)
-
-    # Classify the hand rank
-    hands_list.sort(key=lambda x: (x[0].organise_hand(), x[0].card_ranks), reverse=True)
-
-    # After sorting, apply tie-breaking for hands with equal strength
-    for i in range(1, len(hands_list)):
-        if hands_list[i][1] == hands_list[i - 1][1]:  # If strengths are equal
-            if not hands_list[i - 1][0].tie_break(hands_list[i][0]):
-                hands_list[i - 1], hands_list[i] = hands_list[i], hands_list[i - 1]
-
-    for rank, (hand, _, bid) in enumerate(hands_list, 1):
-        winnings = (len(hands_list) - rank + 1) * bid  # Reverse the rank so that the strongest gets the highest rank
-        rank_list.append((str(hand), len(hands_list) - rank + 1, bid, winnings))  # Reverse the rank
-
-    print(f"rank_list: {rank_list}")
-
-    total = sum(rank[3] for rank in rank_list)
-
+        hand = line.split()[0]
+        bid = int(line.split()[1])
+        hands_list.append((hand, bid))  
+    
+    # Sort the hands
+    hands_list.sort(key=lambda hand: organise_hand(hand[0]))
+    
+    # Now they're sorted, calc winnings
+    for rank, (hand, bid) in enumerate(hands_list, 1):
+        total += rank * bid    
+        
     return total
 
 
 def part_two(data_input):
-    
+    total = 0
+    hands_list = []
 
-    return None
+    # Get list of tuples of the hand, bid combo
+    for line in data_input:
+        hand = line.split()[0]
+        bid = int(line.split()[1])
+        hands_list.append((hand, bid))
+    
+    # Sort the hands
+    hands_list.sort(key=lambda hand_bid: organise_hand_with_jokers(hand_bid[0]))
+    
+    # Now they're sorted, calc winnings
+    for rank, (hand, bid) in enumerate(hands_list, 1):
+        total += rank * bid    
+        
+    return total
 
 
 
