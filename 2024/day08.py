@@ -15,6 +15,23 @@ from utils import get_list_from_file
 from itertools import combinations
 
 def get_antenna_coords(grid):
+    """Generate a dictionary of antenna types and their coordinates.
+    
+    The dictionary maps each antenna type (a string) to a list of coordinates
+    (tuples) where that antenna is located in the grid.
+    
+    Example:
+        {"A": [(0, 2), (3, 4)], "0": [(6, 1)]}
+    
+    Args:
+        grid (list[list[str]]): A 2D grid of ground (".") and antenna characters 
+                                 (a-z, A-Z, 0-9) as strings.
+    
+    Returns:
+        dict: A dictionary where keys are antenna types (str) and values are 
+              lists of tuples, where each tuple represents the coordinates of 
+              an antenna (row, col).
+    """
     antenna_coords = {}
     for row_idx, row in enumerate(grid):
         for match in re.finditer(r"[a-zA-Z0-9]", "".join(row)):
@@ -28,22 +45,25 @@ def get_antenna_coords(grid):
 
 
 def part_one(data_input):
+    """ Solve Part 1 by generating a dictionary of antenna types and coordinates, then for
+    each pair of coordinates calculate the position of the antinodes. Add these antinode 
+    positions to a set (to avoid duplicates) and return the length of the set.
+    
+    Args:
+        data_input (list[str]): A list of ground (".") and antenna characters 
+                                (a-z, A-Z, 0-9) as strings.
+                                
+    Returns:
+        int: Integer length of the set of antinodes
+    """
     count = 0
     grid = [list(row) for row in data_input]
     antinodes = set()
     
-    # Get a dict of the antenna and their locations
-    """ 
-    {"A": [(0, 2), (3, 4)], "0": [(6, 1)]}
-    """
     antennas_dict = get_antenna_coords(grid)
-    #print(f"antennas_dict >>> {antennas_dict}")
-    # For each pair in antenna_map.values(), using combinations, set the antinodes if within bounds
+
     for antenna_array in antennas_dict.values():
         for first_coord, second_coord in combinations(antenna_array, 2):
-            #print(f"first_coord >>> {first_coord}")
-            #print(f"second_coord >>> {second_coord}")
-            # Calc antinode (an) one and two's row/col
             an_one_row, an_one_col = first_coord            
             an_two_row, an_two_col = second_coord
             
@@ -55,30 +75,49 @@ def part_one(data_input):
                 antinodes.add(antinode_one)
             if 0 <= antinode_two[0] < len(grid) and 0 <= antinode_two[1] < len(grid[0]):
                 antinodes.add(antinode_two)
-    #print(f"antinodes >>> {antinodes}")
-    #count = len([0 for row, col in antinode_list if 0 <= row < len(grid) and 0 <= col < len(grid[0])]) // 2
-    count = len(antinodes)
-    # for array in antennas_dict.values():
-    #     for i in range(len(array)):
-    #         for j in range(i + 1, len(array)):
-    #             r1, c1 = array[i]
-    #             r2, c2 = array[j]
-    #             antinodes.add((2 * r1 - r2, 2 * c1 - c2))
-    #             antinodes.add((2 * r2 - r1, 2 * c2 - c1))
 
-    # print(len([0 for r, c in antinodes if 0 <= r < len(grid) and 0 <= c < len(grid[0])]))
+    count = len(antinodes)
     
     return count
 
 
 def part_two(data_input):
+    """ Solve Part 2 by generating a dictionary of antenna types and coordinates, then for
+    each pair of coordinates calculate the position of the first antinode. Trace the line 
+    in both directions (from first to second antenna and vice versa) adding other anti-
+    nodes within bounds
+    
+    
+    Args:
+        data_input (list[str]): A list of ground (".") and antenna characters 
+                                (a-z, A-Z, 0-9) as strings.
+                                
+    Returns:
+        int: Integer length of the set of antinodes
+    """
     count = 0
-   
+    grid = [list(row) for row in data_input]
+    antinodes = set()
+    antennas_dict = get_antenna_coords(grid)
+    
+    for antenna_array in antennas_dict.values():
+        for first_coord, second_coord in combinations(antenna_array, 2):
+            an_one_row, an_one_col = first_coord            
+            an_two_row, an_two_col = second_coord
+           
+            row_diff = an_one_row - an_two_row
+            col_diff = an_one_col - an_two_col
+
+            for start_coord, direction in [(first_coord, (row_diff, col_diff)), (second_coord, (-row_diff, -col_diff))]:
+                loop_row, loop_col = start_coord
+                while 0 <= loop_row < len(grid) and 0 <= loop_col < len(grid[0]):
+                    antinodes.add((loop_row, loop_col))
+                    loop_row += direction[0]
+                    loop_col += direction[1]
+                
+    count = len(antinodes)
     
     return count
-
-
-TEST_INPUT = ['............', '........0...', '.....0......', '.......0....', '....0.......', '......A.....', '............', '............', '........A...', '.........A..', '............', '............']
 
 
 if __name__ == "__main__":
@@ -86,8 +125,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(8, 2024)
-    
-    #input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
