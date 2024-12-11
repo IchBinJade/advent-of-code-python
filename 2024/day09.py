@@ -2,6 +2,8 @@
 Author: IchBinJade
 Date  : 2024-12-10
 AoC 2024 Day 9 - https://adventofcode.com/2024/day/9
+
+TODO: Start and solve part 2
 """
 
 import sys
