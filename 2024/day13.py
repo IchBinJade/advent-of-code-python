@@ -3,7 +3,7 @@ Author: IchBinJade
 Date  : 2024-12-14
 AoC 2024 Day 13 - https://adventofcode.com/2024/day/13
 
-TODO: Start and solve part 2
+Utilises: Systems of linear equations (maths is fun!)
 """
 
 import sys
@@ -22,7 +22,6 @@ def find_prize(game):
         for b_press in range(101):
             new_x = a_press * ax + b_press * bx
             new_y = a_press * ay + b_press * by
-            # Check if new position matches prize position
             if new_x == px and new_y == py:
                 total_cost = 3 * a_press + b_press
                 min_tokens = min(min_tokens, total_cost)
@@ -31,6 +30,24 @@ def find_prize(game):
         return 0
     
     return min_tokens
+
+
+def find_prize_part_2(game):
+    ax, ay, bx, by, px, py = game
+    new_px = px + 10000000000000
+    new_py = py + 10000000000000
+    
+    B = (new_px*ay - new_py*ax) // (ay*bx - by*ax)
+    A = (new_px*by - new_py*bx) // (by*ax - bx*ay)
+    
+    new_x = A * ax + B * bx
+    new_y = A * ay + B * by
+    
+    if new_x == new_px and new_y == new_py:
+        total_cost = 3 * A + B
+        return total_cost
+    else:
+        return 0  
 
 
 def parse_input(data_input):
@@ -46,30 +63,31 @@ def parse_input(data_input):
 
 def part_one(data_input):
     total = 0
-    #print(data_input)
+
     button_prize_numbers = parse_input(data_input)
-    #print(f"button_prize_numbers >>> {button_prize_numbers}")
     for game in button_prize_numbers:
         result = find_prize(game)
         total += result
-        #print(f"result >>> {result}")
 
     return total
 
 
 def part_two(data_input):
-    pass
+    total = 0
 
+    button_prize_numbers = parse_input(data_input)
+    for game in button_prize_numbers:
+        result = find_prize_part_2(game)
+        total += result
+    
+    return total
 
-TEST_INPUT = ['Button A: X+94, Y+34', 'Button B: X+22, Y+67', 'Prize: X=8400, Y=5400', '', 'Button A: X+26, Y+66', 'Button B: X+67, Y+21', 'Prize: X=12748, Y=12176', '', 'Button A: X+17, Y+86', 'Button B: X+84, Y+37', 'Prize: X=7870, Y=6450', '', 'Button A: X+69, Y+23', 'Button B: X+27, Y+71', 'Prize: X=18641, Y=10279']
 
 if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
     input_data = get_list_from_file(13, 2024)
-    
-    #input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
