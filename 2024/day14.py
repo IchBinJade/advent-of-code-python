@@ -2,8 +2,6 @@
 Author: IchBinJade
 Date  : 2024-12-15
 AoC 2024 Day 14 - https://adventofcode.com/2024/day/14
-
-TODO: Start and solve part 2
 """
 
 import sys
@@ -14,6 +12,29 @@ import re
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
 from utils import get_list_from_file
+from collections import deque
+from PIL import Image
+
+def save_grid_as_image(grid, folder, step_number):
+    filename = os.path.join(folder, f"image{step_number}.png")
+    # Get the dimensions of the grid
+    height = len(grid)
+    width = len(grid[0])
+
+    # Create a new image (mode '1' is 1-bit color, black and white)
+    image = Image.new('1', (width, height))
+
+    # Create a list of pixel values where 0 -> white and 1 -> black (robots)
+    pixels = []
+    for row in grid:
+        for value in row:
+            pixels.append(0 if value > 0 else 1)  # white for robot, black for empty
+
+    # Put the pixel data into the image
+    image.putdata(pixels)
+
+    # Save the image to the specified file
+    image.save(filename)
 
 
 def get_quadrants(grid):
@@ -43,14 +64,10 @@ def get_quadrants(grid):
 
 
 def move_robots(bots):
-    # make a grid: start with test dimensions of 11 x 7
-    #width = 11
-    #height = 7
     width = 101
     height = 103
     grid = [[0 for _ in range(width)] for _ in range(height)]
-    #print(f"starting grid >>> {grid}")
-    
+
     for bot in bots:
         x, y, dx, dy = bot
         x = x % width
@@ -63,9 +80,54 @@ def move_robots(bots):
             if grid[y][x] > 0:
                 grid[y][x] -= 1
             x, y = next_x, next_y
-    
-    # print(f"final grid >>> {grid}")      
+     
     return grid
+
+
+def find_easter_egg(bot_list):
+    """ 
+    Re-using part 1's function but moving every bot every second, instead of
+    moving 1 bot for 100 seconds before moving to the next. And find the safety
+    factor after each second, returning the lowest
+    """
+    width = 101
+    height = 103
+    grid = [[0 for _ in range(width)] for _ in range(height)]
+    
+    safety_factors_list = []
+    min_safety = float('inf')
+    best_time = 0
+    step_number = 1 # For creating the grid image
+    
+    for time in range(1, width * height + 1):
+        for idx, bot in enumerate(bot_list):
+            x, y, dx, dy = bot
+            x = x % width
+            y = y % height
+            next_x = (x + dx) % width
+            next_y = (y + dy) % height
+            grid[next_y][next_x] += 1
+            if grid[y][x] > 0:
+                grid[y][x] -= 1
+            bot_list[idx] = (next_x, next_y, dx, dy)
+        # PRINT GRID
+        folder = "day14_images"
+        save_grid_as_image(grid, folder, step_number)
+        step_number += 1
+            
+        # Calc safety factor after this second
+        quadrants = get_quadrants(grid)
+        safety_factor = 1
+        for quad in quadrants:
+            bots_in_quad = sum([sum(row) for row in quad])
+            safety_factor *= bots_in_quad
+            
+        safety_factors_list.append(safety_factor)
+        if safety_factor < min_safety:
+            min_safety = safety_factor
+            best_time = time
+            
+    return best_time
 
 
 def parse_input(raw_input):
@@ -78,6 +140,7 @@ def parse_input(raw_input):
     
     return bot_list
 
+
 def part_one(data_input):
     total = 1
     bot_list = parse_input(data_input)
@@ -85,30 +148,24 @@ def part_one(data_input):
     final_grid = move_robots(bot_list)
 
     quadrants = get_quadrants(final_grid)
-    #print(f"quadrants >>> {quadrants}")
     for quad in quadrants:
-        #print(f"quad >>> {quad}")
         bots = sum([sum(row) for row in quad])
-        # print(f"bots in quad >>> {bots}")
         total *= bots
 
     return total
 
 
 def part_two(data_input):
+    bot_list = parse_input(data_input)
+    result =  find_easter_egg(bot_list)
+    return result
 
-    
-    return None
-
-TEST_INPUT = ['p=0,4 v=3,-3', 'p=6,3 v=-1,-3', 'p=10,3 v=-1,2', 'p=2,0 v=2,-1', 'p=0,0 v=1,3', 'p=3,0 v=-2,-2', 'p=7,6 v=-1,-3', 'p=3,0 v=-1,-2', 'p=9,3 v=2,3', 'p=7,3 v=-1,2', 'p=2,4 v=2,-3', 'p=9,5 v=-3,-3']
 
 if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
     input_data = get_list_from_file(14, 2024)
-    
-    #input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
