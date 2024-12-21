@@ -2,6 +2,8 @@
 Author: IchBinJade
 Date  : 2024-12-21
 AoC 2024 Day 19 - https://adventofcode.com/2024Y/day/19
+
+Utilises: Memoization, recursion, cache
 """
 
 import sys
@@ -11,6 +13,8 @@ import time
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
 from utils import get_list_from_file
+from functools import cache
+
 
 def can_make_design(patterns, design):
     if not design:
@@ -23,6 +27,20 @@ def can_make_design(patterns, design):
                 return True
         
     return False
+
+
+@cache
+def count_design_methods(design, patterns):
+    if not design:
+        return 1
+    
+    total_count = 0
+    for pattern in "".join(patterns).split(", "):
+        if design.startswith(pattern):
+            leftover_design = design[len(pattern):]
+            total_count += count_design_methods(leftover_design, patterns)
+    
+    return total_count
 
 
 def part_one(data_input):
@@ -38,10 +56,16 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
-
-
-TEST_INPUT = ['r, wr, b, g, bwu, rb, gb, br', '', 'brwrr', 'bggr', 'gbbr', 'rrbgbr', 'ubwu', 'bwurrg', 'brgr', 'bbrgwb']
+    count = 0
+    empty_idx = data_input.index("")
+    patterns, designs = data_input[:empty_idx], data_input[empty_idx + 1:]
+    
+    patterns_tuple = tuple(patterns)
+    
+    for design in designs:
+        count += count_design_methods(design, patterns_tuple)
+    
+    return count
 
 
 if __name__ == "__main__":
@@ -50,8 +74,6 @@ if __name__ == "__main__":
     # Get input data
     input_data = get_list_from_file(19, 2024)
     
-    # input_data = TEST_INPUT
-
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
     print(f"Part 2 = {part_two(input_data)}")
