@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress (19.5/25)
+[2024](#2024) - In Progress (20/25)
 
 [2023](#2023) - In Progress (9.5/25)
 
