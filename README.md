@@ -48,15 +48,15 @@ Main repo for Advent of Code solutions in Python
 
 [Day 15](/2024/day15.py) - Part 1 & 2
 
-[Day 16](/2024/day16.py) - Part 1 & 2
+**[Day 16](/2024/day16.py) - Part 1 & 2:** Dijkstra's algorithm
 
-[Day 17](/2024/day17.py) - Part 1 & 2
+**[Day 17](/2024/day17.py) - Part 1 & 2:** Recursion
 
-[Day 18](/2024/day18.py) - Part 1 & 2
+**[Day 18](/2024/day18.py) - Part 1 & 2:** BFS
 
-[Day 19](/2024/day19.py) - Part 1 & 2
+**[Day 19](/2024/day19.py) - Part 1 & 2:** Memoization, recursion and the cache decorator
 
-[Day 20](/2024/day20.py) - Part 1
+**[Day 20](/2024/day20.py) - Part 1 & 2:** BFS and 'teleporting' in a grid.
 
 </details>
 
