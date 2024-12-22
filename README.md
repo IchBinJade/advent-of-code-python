@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress (20/25)
+[2024](#2024) - In Progress (20.5/25)
 
 [2023](#2023) - In Progress (9.5/25)
 
@@ -57,6 +57,10 @@ Main repo for Advent of Code solutions in Python
 **[Day 19](/2024/day19.py) - Part 1 & 2:** Memoization, recursion and the cache decorator
 
 **[Day 20](/2024/day20.py) - Part 1 & 2:** BFS and 'teleporting' in a grid.
+
+ [Day 21]() - In Progress
+
+ **[Day 22](/2024/day22.py) - Part 1:** Iterative number transfomration
 
 </details>
 
