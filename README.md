@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress (20.5/25)
+[2024](#2024) - In Progress (21/25)
 
 [2023](#2023) - In Progress (9.5/25)
 
@@ -60,7 +60,7 @@ Main repo for Advent of Code solutions in Python
 
  [Day 21]() - In Progress
 
- **[Day 22](/2024/day22.py) - Part 1:** Iterative number transfomration
+ **[Day 22](/2024/day22.py) - Part 1 & 2:** Iterative number transformation
 
 </details>
 
