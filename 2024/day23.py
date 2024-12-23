@@ -2,6 +2,8 @@
 Author: IchBinJade
 Date  : 2024-12-23
 AoC 2024 Day 23 - https://adventofcode.com/2024/day/23
+
+Utilises: DFS
 """
 
 import sys
@@ -18,44 +20,51 @@ def locate_three_amigos(graph):
     
     for computer_1 in graph:
         neighbours_1 = graph[computer_1]
-        # For each pair, 2 and 3, check if they're connected via neighbours
         for computer_2 in neighbours_1:
             for computer_3  in neighbours_1:
-                # if duplicate pair, skip
                 if computer_2 == computer_3:
                     continue
-                # check if 2 and 3 neighbours of each other
                 if computer_2 in graph[computer_3]:
-                    # we've found a set of 3, set new amigo to sorted tuple then add to set
                     connected = tuple(sorted([computer_1, computer_2, computer_3]))
                     amigos.add(connected)
     
     return amigos
 
 
+def find_connected_components(graph):
+    sets = set()
+    
+    def dfs(node, required):
+        key = tuple(sorted(required))
+        if key in sets:
+            return
+        sets.add(key)
+        
+        for neighbour in graph[node]:
+            if neighbour not in required and all(neighbour in graph[query] for query in required):
+                dfs(neighbour, {*required, neighbour})
+        
+    
+    for node in graph:
+        dfs(node, {node})
+            
+    return sets
+    
+
 def part_one(data_input):
     total = 0
-    
-    # Create a graph of nodes from the input
+
     graph = {}
-    # Loop input
     for connection in data_input:
-        # set first and second computers
         node_1, node_2 = connection.split("-")
-        # check if either computers already in graph and add if not
         if node_1 not in graph:
             graph[node_1] = set()
         if node_2 not in graph:
             graph[node_2] = set()
-        # add computers to graph
         graph[node_1].add(node_2)
         graph[node_2].add(node_1)
-        
-    # Find sets of 3
+
     threes_list = locate_three_amigos(graph)
-    # print("LIST OF CONNECTED COMPS:")
-    # for row in sorted(threes_list):
-    #     print(*row, sep=",")
 
     for network in sorted(threes_list):
         for node in network:
@@ -67,18 +76,28 @@ def part_one(data_input):
 
 
 def part_two(data_input):
+    graph = {}
+    for connection in data_input:
+        node_1, node_2 = connection.split("-")
+        if node_1 not in graph:
+            graph[node_1] = set()
+        if node_2 not in graph:
+            graph[node_2] = set()
+        graph[node_1].add(node_2)
+        graph[node_2].add(node_1)
+    
+    sets = find_connected_components(graph)
+    
+    largest = max(sets, key=len)
 
-    return None
+    return ",".join(sorted(largest))
 
-TEST_INPUT = ['kh-tc', 'qp-kh', 'de-cg', 'ka-co', 'yn-aq', 'qp-ub', 'cg-tb', 'vc-aq', 'tb-ka', 'wh-tc', 'yn-cg', 'kh-ub', 'ta-co', 'de-co', 'tc-td', 'tb-wq', 'wh-td', 'ta-ka', 'td-qp', 'aq-cg', 'wq-ub', 'ub-vc', 'de-ta', 'wq-aq', 'wq-vc', 'wh-yn', 'ka-de', 'kh-ta', 'co-tc', 'wh-qp', 'tb-vc', 'td-yn']
 
 if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
     input_data = get_list_from_file(23, 2024)
-    
-    input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
