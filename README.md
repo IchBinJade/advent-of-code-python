@@ -6,7 +6,7 @@ Main repo for Advent of Code solutions in Python
 
 [2024](#2024) - In Progress (23/25)
 
-[2023](#2023) - In Progress (11/25)
+[2023](#2023) - In Progress (11.5/25)
 
 [2022](#2022) - In Progress (3.5/25)
 
@@ -91,6 +91,8 @@ Main repo for Advent of Code solutions in Python
 **[Day 10](/2023/day10.py) - Part 1 & 2:** BFS, areas inside loops
 
 **[Day 11](/2023/day11.py) - Part 1 & 2:** Pairwise comparison, distance calculation
+
+**[Day 12](/2023/day12.py) - Part 1:** Recursion
 
 </details>
 
