@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress (21/25)
+[2024](#2024) - In Progress (22/25)
 
 [2023](#2023) - In Progress (10/25)
 
@@ -58,7 +58,7 @@ Main repo for Advent of Code solutions in Python
 
 **[Day 20](/2024/day20.py) - Part 1 & 2:** BFS and 'teleporting' in a grid.
 
- [Day 21]() - In Progress
+**[Day 21](/2024/day21.py) - Part 1 & 2:** BFS and recursion
 
  **[Day 22](/2024/day22.py) - Part 1 & 2:** Iterative number transformation
 
