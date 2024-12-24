@@ -11,9 +11,12 @@ import time
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
 from utils import get_list_from_file
+from functools import cache
 
 
-def count_arrangements(pattern, block):
+@cache
+def count_arrangements(pattern, block, cache={}):
+        
     if pattern == "":
         if block == ():
             return 1
@@ -25,16 +28,21 @@ def count_arrangements(pattern, block):
             return 0
         return 1
     
+    key = (pattern, block)
+    if key in cache:
+        return cache[key]
+    
     count = 0
-    if pattern[0] == "." or pattern[0] == "?":
+    if pattern[0] in ".?":
         count += count_arrangements(pattern[1:], block)
         
-    if pattern[0] == "#"or pattern[0] == "?":
+    if pattern[0] in "#?":
         block_size = block[0]
-        if block_size <= len(pattern):
-            if "." not in pattern[:block_size] and (block_size == len(pattern) or pattern[block_size] != "#"):
-                count += count_arrangements(pattern[block_size + 1:], block[1:])
-                
+        if block_size <= len(pattern) and "." not in pattern[:block_size] and (block_size == len(pattern) or pattern[block_size] != "#"):
+            count += count_arrangements(pattern[block_size + 1:], block[1:])
+    
+    cache[key] = count
+            
     return count
 
 
@@ -44,24 +52,31 @@ def part_one(data_input):
     for line in data_input:
         pattern, block = line.split(" ")
         block = tuple(map(int, block.split(",")))
-        # print(f"pattern = {pattern} ; block = {block}")
         total += count_arrangements(pattern, block)
     
     return total
 
 
 def part_two(data_input):
-    pass
+    total = 0
+    
+    for line in data_input:
+        pattern, block = line.split(" ")
+        # "Unfold" the pattern
+        pattern = "?".join(([pattern] * 5))
+        
+        block = tuple(map(int, block.split(",")))
+        block *= 5
+        total += count_arrangements(pattern, block)
+    
+    return total
 
-TEST_INPUT = ['???.### 1,1,3', '.??..??...?##. 1,1,3', '?#?#?#?#?#?#?#? 1,3,1,6', '????.#...#... 4,1,1', '????.######..#####. 1,6,5', '?###???????? 3,2,1']
 
 if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
     input_data = get_list_from_file(12, 2023)
-    
-    input_data = TEST_INPUT
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}") # P1 test = 21
