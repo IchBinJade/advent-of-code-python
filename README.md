@@ -64,6 +64,8 @@ Main repo for Advent of Code solutions in Python
 
 **[Day 23](/2024/day23.py) - Part 1 & 2:** DFS
 
+**[Day 24](/2024/day24.py) - Part 1:** Recursion and logical operators
+
 </details>
 
 ## 2023
