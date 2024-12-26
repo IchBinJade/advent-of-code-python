@@ -4,7 +4,7 @@ Main repo for Advent of Code solutions in Python
 
 ## Years
 
-[2024](#2024) - In Progress (24/25)
+[2024](#2024) - Complete! (25/25)
 
 [2023](#2023) - In Progress (12/25)
 
@@ -64,9 +64,9 @@ Main repo for Advent of Code solutions in Python
 
 **[Day 23](/2024/day23.py) - Part 1 & 2:** DFS
 
-**[Day 24](/2024/day24.py) - Part 1:** Recursion and logical operators
+**[Day 24](/2024/day24.py) - Part 1 & 2:** Recursion and logical operators
 
-[Day 25](/2024/day25.py) - Part 1
+**[Day 25](/2024/day25.py) - Only 1 Part:** Transposing grid
 
 </details>
 
