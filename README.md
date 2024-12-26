@@ -14,6 +14,16 @@ Main repo for Advent of Code solutions in Python
 
 [2020](#2020) - In Progress (2/25)
 
+2019 - Not started (0/25)
+
+2018 - Not started (0/25)
+
+[2017](#2017) - In Progress (1/25)
+
+2016 - Status (0/25)
+
+2015 - Status (0/25)
+
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
 
@@ -21,7 +31,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 02 = 2015 Day [19](https://adventofcode.com/2015/day/19)
 * 03 = 2020 Day [2**](https://adventofcode.com/2020/day/2)
 * 04 = 2019 Day [10](https://adventofcode.com/2019/day/10)
-* 05 = 2017 Day [1](https://adventofcode.com/2017/day/1)
+* 05 = 2017 Day [1**](https://adventofcode.com/2017/day/1)
 * 06 = 2018 Days [5](https://adventofcode.com/2018/day/5) & [4](https://adventofcode.com/2018/day/4)
 * 07 = 2022 Day [9](https://adventofcode.com/2022/day/9)
 * 08 = 2016 Day [25](https://adventofcode.com/2016/day/25)
@@ -164,5 +174,12 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 [Day 01](/2020/day01.py) - Part 1 & 2
 
 [Day 02](/2020/day02.py) - Part 1 & 2
+
+</details>
+
+## 2017
+<details>
+
+[Day 01](/2017/day01.py) - Part 1 & 2
 
 </details>
