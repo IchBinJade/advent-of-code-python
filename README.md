@@ -10,7 +10,7 @@ Main repo for Advent of Code solutions in Python
 
 [2022](#2022) - In Progress (3.5/25)
 
-[2021](#2021) - In Progress (3.5/25)
+[2021](#2021) - In Progress (4/25)
 
 [2020](#2020) - In Progress (2/25)
 
@@ -163,7 +163,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 [Day 02](/2021/day02.py) - Part 1 & 2
 
-[Day 03](/2021/day03.py) - Part 1
+**[Day 03](/2021/day03.py) - Part 1 & 2:** Bitwise arithmetic
 
 **[Day 06](/2021/day06.py) - Part 1 & 2:** Dynamic programming
 
