@@ -18,7 +18,7 @@ Main repo for Advent of Code solutions in Python
 
 [2018](#2018) - In Progress (2/25)
 
-[2017](#2017) - In Progress (1/25)
+[2017](#2017) - In Progress (2/25)
 
 [2016](#2016) - In Progress (1/25)
 
@@ -44,7 +44,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 15 = 2021 Day [6](https://adventofcode.com/2021/day/6)
 * 16 = 2015 Day [14](https://adventofcode.com/2015/day/14)
 * 17 = 2018 Day [6](https://adventofcode.com/2018/day/6)
-* 18 = 2017 Day [2](https://adventofcode.com/2017/day/2)
+* 18 = 2017 Day [2**](https://adventofcode.com/2017/day/2)
 * 19 = 2023 Day [12**](https://adventofcode.com/2023/day/12)
 * 20 = 2017 Day [24](https://adventofcode.com/2017/day/24)
 * 21 = 2019 Day [25](https://adventofcode.com/2019/day/25)
@@ -53,7 +53,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (12/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (14/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -192,6 +192,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 <details>
 
 [Day 01](/2017/day01.py) - Part 1 & 2
+
+**[Day 02](/2017/day02.py) - Part 1 & 2:** Number manipulation and comparing pairs of numbers in an array
 
 </details>
 
