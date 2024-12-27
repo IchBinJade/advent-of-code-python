@@ -20,7 +20,7 @@ Main repo for Advent of Code solutions in Python
 
 [2017](#2017) - In Progress (1/25)
 
-2016 - Not started (0/25)
+[2016](#2016) - In Progress (1/25)
 
 2015 - Not started (0/25)
 
@@ -40,7 +40,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 11 = 2019 Day [20](https://adventofcode.com/2019/day/20)
 * 12 = 2023 Days [5**](https://adventofcode.com/2023/day/5) & [21](https://adventofcode.com/2023/day/21)
 * 13 = 2020 Day [24](https://adventofcode.com/2020/day/24)
-* 14 = 2016 Day [2](https://adventofcode.com/2016/day/2)
+* 14 = 2016 Day [2**](https://adventofcode.com/2016/day/2)
 * 15 = 2021 Day [6](https://adventofcode.com/2021/day/6)
 * 16 = 2015 Day [14](https://adventofcode.com/2015/day/14)
 * 17 = 2018 Day [6](https://adventofcode.com/2018/day/6)
@@ -53,7 +53,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved. I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (12/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -188,8 +188,17 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 </details>
 
 ## 2017
+
 <details>
 
 [Day 01](/2017/day01.py) - Part 1 & 2
+
+</details>
+
+## 2016
+
+<details>
+
+**[Day 02](/2016/day02.py) - Part 1 & 2:** "Keypad" grid traversal with invalid neighbours
 
 </details>
