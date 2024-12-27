@@ -16,7 +16,7 @@ Main repo for Advent of Code solutions in Python
 
 2019 - Not started (0/25)
 
-[2018](#2018) - In Progress (1/25)
+[2018](#2018) - In Progress (2/25)
 
 [2017](#2017) - In Progress (1/25)
 
@@ -180,6 +180,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 ## 2018
 
 <details>
+
+**[Day 01](/2018/day01.py) - Part 1 & 2:** "cycle" function to create a repeating/looping iterable
 
 **[Day 04](/2018/day04.py) - Part 1 & 2:** Datetime manipulation and roster grid
 
