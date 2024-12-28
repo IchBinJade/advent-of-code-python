@@ -14,7 +14,7 @@ Main repo for Advent of Code solutions in Python
 
 [2020](#2020) - In Progress (2/25)
 
-2019 - Not started (0/25)
+[2019](#2019) - In Progress (1/25)
 
 [2018](#2018) - In Progress (2/25)
 
@@ -178,6 +178,14 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 [Day 01](/2020/day01.py) - Part 1 & 2
 
 [Day 02](/2020/day02.py) - Part 1 & 2
+
+</details>
+
+## 2019
+
+<details>
+
+**[Day 01](/2019/day01.py) - Part 1 & 2:** Recursion of number calculations
 
 </details>
 
