@@ -8,7 +8,7 @@ Main repo for Advent of Code solutions in Python
 
 [2023](#2023) - In Progress (12/25)
 
-[2022](#2022) - In Progress (4.5/25)
+[2022](#2022) - In Progress (5/25)
 
 [2021](#2021) - In Progress (4/25)
 
@@ -151,7 +151,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 [Day 03](/2022/day02.py) - Part 1 & 2
 
-[Day 04](/2022/day04.py) - Part 1
+**[Day 04](/2022/day04.py) - Part 1 & 2:** Checking for overlap/containment in number ranges
 
 **[Day 09](/2022/day09.py) - Part 1 & 2:** Moving nodes on a dynamic graph
 
