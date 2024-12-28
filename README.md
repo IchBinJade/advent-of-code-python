@@ -20,7 +20,7 @@ Main repo for Advent of Code solutions in Python
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (1/25)
+[2016](#2016) - In Progress (2/25)
 
 2015 - Not started (0/25)
 
@@ -49,11 +49,11 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 20 = 2017 Day [24](https://adventofcode.com/2017/day/24)
 * 21 = 2019 Day [25](https://adventofcode.com/2019/day/25)
 * 22 = 2022 Days [11](https://adventofcode.com/2022/day/11) & [21](https://adventofcode.com/2022/day/21)
-* 23 = 2016 Day [9](https://adventofcode.com/2016/day/9)
+* 23 = 2016 Day [9**](https://adventofcode.com/2016/day/9)
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (16/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (18/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -204,5 +204,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 <details>
 
 **[Day 02](/2016/day02.py) - Part 1 & 2:** "Keypad" grid traversal with invalid neighbours
+
+**[Day 09](/2016/day09.py) - Part 1 & 2:** String manipulation and "decompression" through recursion
 
 </details>
