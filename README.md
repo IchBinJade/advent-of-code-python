@@ -8,7 +8,7 @@ Main repo for Advent of Code solutions in Python
 
 [2023](#2023) - In Progress (12/25)
 
-[2022](#2022) - In Progress (3.5/25)
+[2022](#2022) - In Progress (4.5/25)
 
 [2021](#2021) - In Progress (4/25)
 
@@ -33,7 +33,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 04 = 2019 Day [10](https://adventofcode.com/2019/day/10)
 * 05 = 2017 Day [1**](https://adventofcode.com/2017/day/1)
 * 06 = 2018 Days [5](https://adventofcode.com/2018/day/5) & [4**](https://adventofcode.com/2018/day/4)
-* 07 = 2022 Day [9](https://adventofcode.com/2022/day/9)
+* 07 = 2022 Day [9**](https://adventofcode.com/2022/day/9)
 * 08 = 2016 Day [25](https://adventofcode.com/2016/day/25)
 * 09 = 2021 Day [23](https://adventofcode.com/2021/day/23)
 * 10 = 2023 Day [15](https://adventofcode.com/2023/day/15)
@@ -53,7 +53,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (18/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (20/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -152,6 +152,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 [Day 03](/2022/day02.py) - Part 1 & 2
 
 [Day 04](/2022/day04.py) - Part 1
+
+**[Day 09](/2022/day09.py) - Part 1 & 2:** Moving nodes on a dynamic graph
 
 </details>
 
