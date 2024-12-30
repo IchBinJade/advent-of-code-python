@@ -8,7 +8,7 @@ Main repo for Advent of Code solutions in Python
 
 [2023](#2023) - In Progress (12/25)
 
-[2022](#2022) - In Progress (5/25)
+[2022](#2022) - In Progress (6/25)
 
 [2021](#2021) - In Progress (4/25)
 
@@ -48,12 +48,12 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 19 = 2023 Day [12**](https://adventofcode.com/2023/day/12)
 * 20 = 2017 Day [24](https://adventofcode.com/2017/day/24)
 * 21 = 2019 Day [25](https://adventofcode.com/2019/day/25)
-* 22 = 2022 Days [11](https://adventofcode.com/2022/day/11) & [21](https://adventofcode.com/2022/day/21)
+* 22 = 2022 Days [11**](https://adventofcode.com/2022/day/11) & [21](https://adventofcode.com/2022/day/21)
 * 23 = 2016 Day [9**](https://adventofcode.com/2016/day/9)
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (22/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (24/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -154,6 +154,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 04](/2022/day04.py) - Part 1 & 2:** Checking for overlap/containment in number ranges
 
 **[Day 09](/2022/day09.py) - Part 1 & 2:** Moving nodes on a dynamic graph
+
+**[Day 11](/2022/day11.py) - Part 1 & 2:** Simulate Monkey in the Middle with OOP. Part 2 involves LCM and modular arithmetic. ("Maths is fun" - Ms S. Mason)
 
 </details>
 
