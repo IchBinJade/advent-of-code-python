@@ -16,7 +16,7 @@ Main repo for Advent of Code solutions in Python
 
 [2019](#2019) - In Progress (3/25)
 
-[2018](#2018) - In Progress (2/25)
+[2018](#2018) - In Progress (3/25)
 
 [2017](#2017) - In Progress (2/25)
 
@@ -32,7 +32,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 03 = 2020 Day [2**](https://adventofcode.com/2020/day/2)
 * 04 = 2019 Day [10](https://adventofcode.com/2019/day/10)
 * 05 = 2017 Day [1**](https://adventofcode.com/2017/day/1)
-* 06 = 2018 Days [5](https://adventofcode.com/2018/day/5) & [4**](https://adventofcode.com/2018/day/4)
+* 06 = 2018 Days [5**](https://adventofcode.com/2018/day/5) & [4**](https://adventofcode.com/2018/day/4)
 * 07 = 2022 Day [9**](https://adventofcode.com/2022/day/9)
 * 08 = 2016 Day [25](https://adventofcode.com/2016/day/25)
 * 09 = 2021 Day [23](https://adventofcode.com/2021/day/23)
@@ -53,7 +53,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (20/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (22/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -200,6 +200,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 01](/2018/day01.py) - Part 1 & 2:** "cycle" function to create a repeating/looping iterable
 
 **[Day 04](/2018/day04.py) - Part 1 & 2:** Datetime manipulation and roster grid
+
+**[Day 05](/2018/day05.py) - Part 1 & 2:** Recursive string manipulation using stacks
 
 </details>
 
