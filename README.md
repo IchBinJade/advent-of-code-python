@@ -22,7 +22,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-2015 - Not started (0/25)
+[2015](#2015) - In Progress (1/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -226,5 +226,13 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 02](/2016/day02.py) - Part 1 & 2:** "Keypad" grid traversal with invalid neighbours
 
 **[Day 09](/2016/day09.py) - Part 1 & 2:** String manipulation and "decompression" through recursion
+
+</details>
+
+## 2015
+
+<details>
+
+[Day 01](/2015/day01.py) - Part 1 & 2
 
 </details>
