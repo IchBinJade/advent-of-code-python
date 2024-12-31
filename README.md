@@ -237,4 +237,6 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 [Day 02](/2015/day02.py) - Part 1 & 2
 
+[Day 03](/2015/day03.py) - Part 1 & 2
+
 </details>
