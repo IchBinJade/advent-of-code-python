@@ -261,4 +261,6 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 **[Day 14](/2015/day14.py) - Part 1 & 2:** Reindeer racing with python OOP
 
+**[Day 15](/2015/day15.py) - Part 1 & 2:** Using itertools.product() to get combinations of "recipes"
+
 </details>
