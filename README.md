@@ -22,7 +22,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (11/25)
+[2015](#2015) - In Progress (12/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -254,5 +254,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 10](/2015/day10.py) - Part 1 & 2:** Number-as-string manipulation/extending
 
 **[Day 11](/2015/day11.py) - Part 1 & 2:** String manipulation/generation with ord() and chr() functions
+
+**[Day 12](/2015/day12.py) - Part 1 & 2:** Recursive processing of an object/dict
 
 </details>
