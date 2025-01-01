@@ -22,7 +22,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (13/25)
+[2015](#2015) - In Progress (14/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -42,7 +42,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 13 = 2020 Day [24](https://adventofcode.com/2020/day/24)
 * 14 = 2016 Day [2**](https://adventofcode.com/2016/day/2)
 * 15 = 2021 Day [6**](https://adventofcode.com/2021/day/6)
-* 16 = 2015 Day [14](https://adventofcode.com/2015/day/14)
+* 16 = 2015 Day [14**](https://adventofcode.com/2015/day/14)
 * 17 = 2018 Day [6](https://adventofcode.com/2018/day/6)
 * 18 = 2017 Day [2**](https://adventofcode.com/2017/day/2)
 * 19 = 2023 Day [12**](https://adventofcode.com/2023/day/12)
@@ -53,7 +53,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 * 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
 * 25 = Nothing revisited
 
-*'s indicate number of stars achieved (26/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+*'s indicate number of stars achieved (28/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
 
 ## 2024
 
@@ -258,5 +258,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 12](/2015/day12.py) - Part 1 & 2:** Recursive processing of an object/dict
 
 **[Day 13](/2015/day13.py) - Part 1 & 2:** Generate optimal seating with itertools.permutations()
+
+**[Day 14](/2015/day14.py) - Part 1 & 2:** Reindeer racing with python OOP
 
 </details>
