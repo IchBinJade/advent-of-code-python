@@ -22,7 +22,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (7/25)
+[2015](#2015) - In Progress (8/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -246,5 +246,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 06](/2015/day06.py) - Part 1 & 2:** Manipulating grid values from regex matched instruction
 
 **[Day 07](/2015/day07.py) - Part 1 & 2:** Bitwise operations on "wire" values
+
+**[Day 08](/2015/day08.py) - Part 1 & 2:** Evaluate code and in-memory string representations using eval()
 
 </details>
