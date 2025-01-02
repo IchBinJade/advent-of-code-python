@@ -1,6 +1,8 @@
 # Advent of Code Solutions
 
-Main repo for Advent of Code solutions in Python
+Main repo for Advent of Code solutions in Python. 
+
+Where possible, I've tried to include a one-line summary of the logic, algorithm and/or data structure(s) used to solve the puzzle.
 
 ## Years
 
@@ -22,7 +24,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (20/25)
+[2015](#2015) - In Progress (21/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -272,5 +274,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 19](/2015/day19.py) - Part 1 & 2:** More string manipulation; "atom" and "molecule" calibration/fabrication
 
 **[Day 20](/2015/day20.py) - Part 1 & 2:** Calculating elf/house present deliveries with upper limit
+
+**[Day 21](/2015/day21.py) - Part 1 & 2:** Find gold spend to defend your RPG character; uses itertools.combinations()
+and dictionaries of tuples
 
 </details>
