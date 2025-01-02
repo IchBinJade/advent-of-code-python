@@ -22,7 +22,7 @@ Main repo for Advent of Code solutions in Python
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (14/25)
+[2015](#2015) - In Progress (16/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -262,5 +262,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 14](/2015/day14.py) - Part 1 & 2:** Reindeer racing with python OOP
 
 **[Day 15](/2015/day15.py) - Part 1 & 2:** Using itertools.product() to get combinations of "recipes"
+
+**[Day 16](/2015/day16.py) - Part 1 & 2:** Dictionary values comparison with regex for input parsing
 
 </details>
