@@ -24,7 +24,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (21/25)
+[2015](#2015) - In Progress (22/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -277,5 +277,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 **[Day 21](/2015/day21.py) - Part 1 & 2:** Find gold spend to defend your RPG character; uses itertools.combinations()
 and dictionaries of tuples
+
+**[Day 22](/2015/day22.py) - Part 1 & 2:** Find min mana spend for magic RPG; utilises recursion
 
 </details>
