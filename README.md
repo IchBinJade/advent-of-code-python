@@ -24,7 +24,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (22/25)
+[2015](#2015) - In Progress (23/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -279,5 +279,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 and dictionaries of tuples
 
 **[Day 22](/2015/day22.py) - Part 1 & 2:** Find min mana spend for magic RPG; utilises recursion
+
+**[Day 23](/2015/day23.py) - Part 1 & 2:** Simulate register-based computations for a 'computer'
 
 </details>
