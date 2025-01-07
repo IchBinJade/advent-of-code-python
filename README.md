@@ -223,11 +223,13 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 ## 2016
 
-<details>
+<details open>
 
 [Day 01](/2016/day01.py) - Part 1 & 2
 
 **[Day 02](/2016/day02.py) - Part 1 & 2:** "Keypad" grid traversal with invalid neighbours
+
+**[Day 03](/2016/day03.py) - Part 1 & 2:** Transposing input into columns and extracting triples to find possible triangles
 
 **[Day 09](/2016/day09.py) - Part 1 & 2:** String manipulation and "decompression" through recursion
 
@@ -235,7 +237,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 ## 2015
 
-<details open>
+<details>
 
 [Day 01](/2015/day01.py) - Part 1 & 2
 
