@@ -24,7 +24,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2016](#2016) - In Progress (2/25)
 
-[2015](#2015) - In Progress (24/25)
+[2015](#2015) - Complete! (25/25)
 
 I will eventually go back and complete past years but for something "different" and to honour
 the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
@@ -283,5 +283,7 @@ and dictionaries of tuples
 **[Day 23](/2015/day23.py) - Part 1 & 2:** Simulate register-based computations for a 'computer'
 
 **[Day 24](/2015/day24.py) - Part 1 & 2:** Partition problem; brute force searching combinations of packages that meet target weight
+
+[Day 25](/2015/day25.py) - Final part
 
 </details>
