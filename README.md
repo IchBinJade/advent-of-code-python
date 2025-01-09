@@ -22,7 +22,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (6/25)
+[2016](#2016) - In Progress (7/25)
 
 [2015](#2015) - Complete! (25/25)
 
@@ -234,6 +234,10 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 04](/2016/day04.py) - Part 1 & 2:** Part 2 implements a caesar cipher decryption algorithm - fun times!
 
 **[Day 05](/2016/day05.py) - Part 1 & 2:** MD5/hexdigest usage from hashlib
+
+**[Day 06](/2016/day06.py) - Part 1 & 2:** Transpose input into columns and return string of most/least common characters
+
+
 
 **[Day 09](/2016/day09.py) - Part 1 & 2:** String manipulation and "decompression" through recursion
 
