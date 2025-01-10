@@ -22,7 +22,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (9/25)
+[2016](#2016) - In Progress (10/25)
 
 [2015](#2015) - Complete! (25/25)
 
@@ -242,6 +242,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 08](/2016/day08.py) - Part 1 & 2:** Grid manipulation and printing a 10-char 'display' of ascii capital letters
 
 **[Day 09](/2016/day09.py) - Part 1 & 2:** String manipulation and "decompression" through recursion
+
+**[Day 10](/2016/day10.py) - Part 1 & 2:** Simulation based iterative solution using dict of arrays to track/store bot state/chips
 
 </details>
 
