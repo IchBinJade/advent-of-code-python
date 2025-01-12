@@ -22,7 +22,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (12/25)
+[2016](#2016) - In Progress (13/25)
 
 [2015](#2015) - Complete! (25/25)
 
@@ -248,6 +248,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 11](/2016/day11.py) - Part 1 & 2:** Move combinations of items across elevator floors and bfs shortest steps to get all items on top floor. Uses State class
 
 **[Day 12](/2016/day12.py) - Part 1 & 2:** Simulate register-based computations for a 'computer'.
+
+**[Day 13](/2016/day13.py) - Part 1 & 2:** Find number of steps in shortest path, and unique locations within 50 steps
 
 </details>
 
