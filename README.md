@@ -22,7 +22,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (15/25)
+[2016](#2016) - In Progress (16/25)
 
 [2015](#2015) - Complete! (25/25)
 
@@ -254,6 +254,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 14](/2016/day14.py) - Part 1 & 2:** MD5 hashing; part two involves key stretching
 
 **[Day 15](/2016/day15.py) - Part 1 & 2:** Simulating a sorta 2p machine with horizontally-sliding discs
+
+**[Day 16](/2016/day16.py) - Part 1 & 2:** Performing a checksum with a modified dragon curve
 
 </details>
 
