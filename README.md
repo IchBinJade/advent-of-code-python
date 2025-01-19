@@ -22,7 +22,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2017](#2017) - In Progress (2/25)
 
-[2016](#2016) - In Progress (18/25)
+[2016](#2016) - In Progress (18.5/25)
 
 [2015](#2015) - Complete! (25/25)
 
@@ -260,6 +260,8 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 17](/2016/day17.py) - Part 1 & 2:** Uses recursed pathfinding and MD5 hashing
 
 **[Day 18](/2016/day18.py) - Part 1 & 2:** Helping Admiral Ackbar logically identify traps in a grid
+
+**[Day 19](/2016/day19.py) - Part 1:** Simulating a White Elephant party with a LinkedList structure for the Elf Circle
 
 </details>
 
