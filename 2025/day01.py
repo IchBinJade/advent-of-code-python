@@ -57,6 +57,7 @@ class Dial:
             # Error catch
             if current == self.head:
                 print(f"Errors: Start value {self.start} not found")
+                break
                 
     def rotate_dial(self, direction, count):
         current = self.head
