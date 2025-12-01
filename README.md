@@ -6,6 +6,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
+[2025](#2025) - In Progress (1/12)
+
 [2024](#2024) - Complete! (25/25)
 
 [2023](#2023) - In Progress (12/25)
@@ -26,36 +28,13 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2015](#2015) - Complete! (25/25)
 
-I will eventually go back and complete past years but for something "different" and to honour
-the work and easter eggs Eric put into 2024, I'll work on the days we revisited in our 2024 adventures:
+## 2025
 
-* 01 - Nothing revisited
-* 02 = 2015 Day [19**](https://adventofcode.com/2015/day/19)
-* 03 = 2020 Day [2**](https://adventofcode.com/2020/day/2)
-* 04 = 2019 Day [10](https://adventofcode.com/2019/day/10)
-* 05 = 2017 Day [1**](https://adventofcode.com/2017/day/1)
-* 06 = 2018 Days [5**](https://adventofcode.com/2018/day/5) & [4**](https://adventofcode.com/2018/day/4)
-* 07 = 2022 Day [9**](https://adventofcode.com/2022/day/9)
-* 08 = 2016 Day [25](https://adventofcode.com/2016/day/25)
-* 09 = 2021 Day [23](https://adventofcode.com/2021/day/23)
-* 10 = 2023 Day [15](https://adventofcode.com/2023/day/15)
-* 11 = 2019 Day [20](https://adventofcode.com/2019/day/20)
-* 12 = 2023 Days [5**](https://adventofcode.com/2023/day/5) & [21](https://adventofcode.com/2023/day/21)
-* 13 = 2020 Day [24](https://adventofcode.com/2020/day/24)
-* 14 = 2016 Day [2**](https://adventofcode.com/2016/day/2)
-* 15 = 2021 Day [6**](https://adventofcode.com/2021/day/6)
-* 16 = 2015 Day [14**](https://adventofcode.com/2015/day/14)
-* 17 = 2018 Day [6](https://adventofcode.com/2018/day/6)
-* 18 = 2017 Day [2**](https://adventofcode.com/2017/day/2)
-* 19 = 2023 Day [12**](https://adventofcode.com/2023/day/12)
-* 20 = 2017 Day [24](https://adventofcode.com/2017/day/24)
-* 21 = 2019 Day [25](https://adventofcode.com/2019/day/25)
-* 22 = 2022 Days [11**](https://adventofcode.com/2022/day/11) & [21**](https://adventofcode.com/2022/day/21)
-* 23 = 2016 Day [9**](https://adventofcode.com/2016/day/9)
-* 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
-* 25 = Nothing revisited
+<details open>
 
-*'s indicate number of stars achieved (30/52). I'll eventually remove this list before AOC 2025 to keep things tidy :)
+[Day 01](/2025/day01.py) - Part 1 & 2: Double Linked List "Dial" movements
+
+</details>
 
 ## 2024
 
@@ -110,6 +89,36 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 **[Day 24](/2024/day24.py) - Part 1 & 2:** Recursion and logical operators
 
 **[Day 25](/2024/day25.py) - Only 1 Part:** Transposing grid
+
+### Revisited Years
+
+* 01 - Nothing revisited
+* 02 = 2015 Day [19**](https://adventofcode.com/2015/day/19)
+* 03 = 2020 Day [2**](https://adventofcode.com/2020/day/2)
+* 04 = 2019 Day [10](https://adventofcode.com/2019/day/10)
+* 05 = 2017 Day [1**](https://adventofcode.com/2017/day/1)
+* 06 = 2018 Days [5**](https://adventofcode.com/2018/day/5) & [4**](https://adventofcode.com/2018/day/4)
+* 07 = 2022 Day [9**](https://adventofcode.com/2022/day/9)
+* 08 = 2016 Day [25](https://adventofcode.com/2016/day/25)
+* 09 = 2021 Day [23](https://adventofcode.com/2021/day/23)
+* 10 = 2023 Day [15](https://adventofcode.com/2023/day/15)
+* 11 = 2019 Day [20](https://adventofcode.com/2019/day/20)
+* 12 = 2023 Days [5**](https://adventofcode.com/2023/day/5) & [21](https://adventofcode.com/2023/day/21)
+* 13 = 2020 Day [24](https://adventofcode.com/2020/day/24)
+* 14 = 2016 Day [2**](https://adventofcode.com/2016/day/2)
+* 15 = 2021 Day [6**](https://adventofcode.com/2021/day/6)
+* 16 = 2015 Day [14**](https://adventofcode.com/2015/day/14)
+* 17 = 2018 Day [6](https://adventofcode.com/2018/day/6)
+* 18 = 2017 Day [2**](https://adventofcode.com/2017/day/2)
+* 19 = 2023 Day [12**](https://adventofcode.com/2023/day/12)
+* 20 = 2017 Day [24](https://adventofcode.com/2017/day/24)
+* 21 = 2019 Day [25](https://adventofcode.com/2019/day/25)
+* 22 = 2022 Days [11**](https://adventofcode.com/2022/day/11) & [21**](https://adventofcode.com/2022/day/21)
+* 23 = 2016 Day [9**](https://adventofcode.com/2016/day/9)
+* 24 = 2022 Day [23](https://adventofcode.com/2022/day/23)
+* 25 = Nothing revisited
+
+*'s indicate number of stars achieved (30/52).
 
 </details>
 
@@ -223,7 +232,7 @@ the work and easter eggs Eric put into 2024, I'll work on the days we revisited 
 
 ## 2016
 
-<details open>
+<details>
 
 [Day 01](/2016/day01.py) - Part 1 & 2
 
