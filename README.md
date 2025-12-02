@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (1/12)
+[2025](#2025) - In Progress (1.5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -33,6 +33,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 <details open>
 
 [Day 01](/2025/day01.py) - Part 1 & 2: Double Linked List "Dial" movements
+
+[Day 02](/2025/day02.py) - Part 1: Arrays and checking repeating sequence(s) of digits
 
 </details>
 
