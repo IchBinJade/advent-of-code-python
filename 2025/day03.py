@@ -2,8 +2,6 @@
 Author: IchBinJade
 Date  : 2025-12-03
 AoC 2025 Day 3 - https://adventofcode.com/2025/day/3
-
-TODO: Solve Part 2
 """
 
 import sys
@@ -30,6 +28,27 @@ def find_largest_two_digit_num(bank):
     return largest_num
 
 
+def find_largest_twelve_digit_num(bank):
+    """
+    Stack-based greedy logic to remove unnecessary
+    digits to find the largest 12-digit
+    """
+    target_length = 12
+    to_remove = len(bank) - target_length
+    result = []
+    
+    for current_digit in bank:
+        while (result and to_remove > 0 and result[-1] < current_digit):
+            result.pop()
+            to_remove -= 1
+        result.append(current_digit)
+        
+    largest_num_str = result[:target_length]
+    largest_num = int("".join(str(n) for n in largest_num_str))
+    
+    return largest_num
+
+
 def part_one(data_input):
     total_joltage = 0
     for bank_str in data_input:
@@ -41,7 +60,13 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    total_joltage = 0
+    for bank_str in data_input:
+        bank_arr = [int(n) for n in bank_str]
+        bank_joltage = find_largest_twelve_digit_num(bank_arr)
+        total_joltage += bank_joltage
+        
+    return total_joltage
 
 
 
