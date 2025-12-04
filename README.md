@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (3/12)
+[2025](#2025) - In Progress (3.5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -37,6 +37,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 [Day 02](/2025/day02.py) - Part 1 & 2: Arrays and checking repeating sequence(s) of digits (part 2: using % to work out potential sequences)
 
 [Day 03](/2025/day03.py) - Part 1 & 2: Two pointer algorithm to find largest 2 digits in array. Pt2 Stack-based greedy logic to remove unnecessary digits to find the largest 12-digit
+
+[Day 04](/2025/day04.py) - Part 1: Traversing a grid checking adjacent cells
 
 </details>
 
