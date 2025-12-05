@@ -3,7 +3,7 @@ Author: IchBinJade
 Date  : 2025-12-05
 AoC 2025 Day 5 - https://adventofcode.com/2025/day/5
 
-TODO: Solve part 2
+Part 2: Thanks to Vallentin for their answer on StackOverflow for merging ranges
 """
 
 import sys
@@ -15,15 +15,19 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 from utils import get_list_from_file
 
 
-def get_array_from_ranges(fresh_ranges):
-    new_set = set()
-    for range_str in fresh_ranges:
-        start_str, end_str = range_str.split("-")
-        start, end = int(start_str), int(end_str)
-        for num in range(start, end + 1):
-            new_set.add(num)
+def merge_overlapped_ranges(fresh_ranges):
+    fresh_list = [[int(n) for n in range_str.split("-")] for range_str in fresh_ranges]
+    fresh_list.sort(key=lambda interval: interval[0])
+    new_list = [fresh_list[0]]
+    
+    for current in fresh_list:
+        previous = new_list[-1]
+        if current[0] <= previous[1]:
+            previous[1] = max(previous[1], current[1])
+        else:
+            new_list.append(current)
         
-    return list(new_set)
+    return new_list
 
 
 def part_one(data_input):
@@ -43,7 +47,16 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    fresh_count = 0
+    split_idx = data_input.index("")
+    fresh_ranges = data_input[:split_idx]
+    fresh_list = merge_overlapped_ranges(fresh_ranges)
+    
+    for fresh_range in fresh_list:
+        start, end = fresh_range[0], fresh_range[1]
+        fresh_count += (end - start) + 1
+        
+    return fresh_count
 
 
 
@@ -52,7 +65,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(5, 2025)
-    # input_data = ['3-5', '10-14', '16-20', '12-18', '', '1', '5', '8', '11', '17', '32']
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
