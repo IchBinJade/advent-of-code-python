@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (4.5/12)
+[2025](#2025) - In Progress (5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -41,6 +41,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 [Day 04](/2025/day04.py) - Part 1: Traversing a grid checking adjacent cells
 
 [Day 05](/2025/day05.py) - Part 1 & 2: Keeping count of how many ingredients (numbers) were in a "fresh" range. Then merging overlapping ranges and taking their count.
+
+[Day 06](/2025/day06.py) - Part 1: Grid traversal by columns and using maths on the elements.
 
 </details>
 

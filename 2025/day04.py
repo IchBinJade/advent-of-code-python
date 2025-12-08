@@ -2,6 +2,8 @@
 Author: IchBinJade
 Date  : 2025-12-04
 AoC 2025 Day 4 - https://adventofcode.com/2025/day/4
+
+TODO: Solve Part 2
 """
 
 import sys
@@ -43,7 +45,11 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    total = 0
+    grid = [list(row) for row in data_input]
+    
+    
+    return total
 
 
 
@@ -51,10 +57,11 @@ if __name__ == "__main__":
     t1 = time.time()
 
     # Get input data
-    input_data = get_list_from_file(4, 2025)
+    # input_data = get_list_from_file(4, 2025)
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
+    input_data = ['..@@.@@@@.', '@@@.@.@.@@', '@@@@@.@.@@', '@.@@@@..@.', '@@.@@@@.@@', '.@@@@@@@.@', '.@.@.@.@@@', '@.@@@.@@@@', '.@@@@@@@@.', '@.@.@@@.@.']
     print(f"Part 2 = {part_two(input_data)}")
 
     # Calc execution time
