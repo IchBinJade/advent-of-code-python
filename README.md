@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (5/12)
+[2025](#2025) - In Progress (5.5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -32,15 +32,15 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 <details open>
 
-[Day 01](/2025/day01.py) - Part 1 & 2: Double Linked List "Dial" movements
+**[Day 01](/2025/day01.py) - Part 1 & 2:** Double Linked List "Dial" movements
 
-[Day 02](/2025/day02.py) - Part 1 & 2: Arrays and checking repeating sequence(s) of digits (part 2: using % to work out potential sequences)
+**[Day 02](/2025/day02.py) - Part 1 & 2:** Arrays and checking repeating sequence(s) of digits (part 2: using % to work out potential sequences)
 
-[Day 03](/2025/day03.py) - Part 1 & 2: Two pointer algorithm to find largest 2 digits in array. Pt2 Stack-based greedy logic to remove unnecessary digits to find the largest 12-digit
+**[Day 03](/2025/day03.py) - Part 1 & 2:** Two pointer algorithm to find largest 2 digits in array. Pt2 Stack-based greedy logic to remove unnecessary digits to find the largest 12-digit
 
-[Day 04](/2025/day04.py) - Part 1: Traversing a grid checking adjacent cells
+**[Day 04](/2025/day04.py) - Part 1 & 2:** Traversing a grid checking adjacent cells. Pt2 utilising queue to iteratively prune boxes.
 
-[Day 05](/2025/day05.py) - Part 1 & 2: Keeping count of how many ingredients (numbers) were in a "fresh" range. Then merging overlapping ranges and taking their count.
+**[Day 05](/2025/day05.py) - Part 1 & 2:** Keeping count of how many ingredients (numbers) were in a "fresh" range. Then merging overlapping ranges and taking their count.
 
 [Day 06](/2025/day06.py) - Part 1: Grid traversal by columns and using maths on the elements.
 
