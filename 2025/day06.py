@@ -3,7 +3,8 @@ Author: IchBinJade
 Date  : 2025-12-08
 AoC 2025 Day 6 - https://adventofcode.com/2025/day/6
 
-TODO: Solve Part 2
+With thanks to JR and HyperNeutrino for helping me understand
+the problem for part 2 better!
 """
 
 import sys
@@ -49,6 +50,57 @@ def do_calc(num, operator, result):
     return result
 
 
+def separate_math_problems(cols):
+    groups = []
+    curr_group = []
+    
+    for col in cols:
+        if set(col) == {" "}:
+            if curr_group:
+                groups.append(curr_group)
+            curr_group = []
+        else:
+            curr_group.append(col)
+            
+    if curr_group:
+        groups.append(curr_group)
+        
+    return groups
+
+
+def rebuild_num(num_col):
+    num_str = ""
+    for digit in num_col[:-1]:
+        if digit.isdigit():
+            num_str += digit
+            
+    return int(num_str) if num_str else None
+
+
+def process_problems(groups):
+    total = 0
+    for group in groups:
+        nums = []
+        operator = group[0][-1]
+        for num_col in group:
+            num = rebuild_num(num_col)
+            if num is not None:
+                nums.append(num)
+        
+        # Do Calcs
+        if not nums:
+            continue
+        calc_list = nums[::-1]
+        running_tot = calc_list[0]
+        for i in range(1, len(calc_list)):
+            next_num = calc_list[i]
+            running_tot = do_calc(next_num, operator, running_tot)
+            
+        total += running_tot
+        
+    return total    
+
+
 def part_one(data_input):
     grid = create_grid(data_input)
     
@@ -71,7 +123,15 @@ def part_one(data_input):
     
 
 def part_two(data_input):
-    pass
+    grid = [list(row.strip("\n")) for row in data_input]
+
+    column_list = list(zip(*grid))
+    
+    groups = separate_math_problems(column_list)
+    
+    total = process_problems(groups)
+    
+    return total
 
 
 
@@ -80,7 +140,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(6, 2025)
-    # input_data = ['123 328  51 64 ', ' 45 64  387 23 ', '  6 98  215 314', '*   +   *   +  ']
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
