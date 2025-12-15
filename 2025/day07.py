@@ -12,6 +12,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__),'..')))
 
 from utils import get_list_from_file
 from collections import deque
+from functools import cache
 
 
 def trace_beam(grid):
@@ -45,8 +46,35 @@ def trace_beam(grid):
             # Add Right Beam
             add_beam(nr, rc)
             
-    return splits    
+    return splits
 
+
+def find_timelines(grid):
+    grid_height = len(grid)
+    grid_width = len(grid[0])
+    start_col = grid[0].index("S")
+    start = (1, start_col)
+    
+    @cache
+    def count_paths(r, c):
+        # Out of bounds
+        if not (0 <= c < grid_width):
+            return 0
+        # Reach the bottom
+        if r >= grid_height:
+            return 1
+        cell = grid[r][c]
+        # Empty space
+        if cell == ".":
+            return count_paths(r + 1, c)
+        # Splitter
+        if cell == "^":
+            left = count_paths(r + 1, c - 1)
+            right = count_paths(r + 1, c + 1)
+            return left + right
+        return 0
+    
+    return count_paths(*start)
 
 def part_one(data_input):
     grid = [list(row) for row in data_input]
@@ -57,7 +85,11 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    grid = [list(row) for row in data_input]
+    
+    total = find_timelines(grid)
+    
+    return total
 
 
 
@@ -66,7 +98,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(7, 2025)
-    # input_data = ['.......S.......', '...............', '.......^.......', '...............', '......^.^......', '...............', '.....^.^.^.....', '...............', '....^.^...^....', '...............', '...^.^...^.^...', '...............', '..^...^.....^..', '...............', '.^.^.^.^.^...^.', '...............']
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")
