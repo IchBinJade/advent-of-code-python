@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (6/12)
+[2025](#2025) - In Progress (6.5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -43,6 +43,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 **[Day 05](/2025/day05.py) - Part 1 & 2:** Keeping count of how many ingredients (numbers) were in a "fresh" range. Then merging overlapping ranges and taking their count.
 
 **[Day 06](/2025/day06.py) - Part 1 & 2**: Grid traversal by columns and using maths on the elements. Pt2 using zip to transpose grid and rebuild numbers by column.
+
+[Day 07](/2025/day07.py) - Part 1: BFS a grid to trace downward beams.
 
 </details>
 
