@@ -2,8 +2,6 @@
 Author: IchBinJade
 Date  : 2025-12-19
 AoC 2025 Day 8 - https://adventofcode.com/2025/day/8
-
-TODO: Part 2
 """
 
 import sys
@@ -126,7 +124,20 @@ def part_one(data_input):
 
 
 def part_two(data_input):
-    pass
+    graph = Graph()
+    box_list = [tuple(int(coord) for coord in item.split(",")) for item in data_input]
+    
+    # populate the graph
+    for x, y, z in box_list:
+        graph.add_box(x, y, z)
+    
+    graph.create_and_sort_edges()
+    
+    for _, id1, id2 in graph.edges:
+        if graph.union(id1, id2):
+            if len(graph.size) == 1:
+                box1, box2 = graph.boxes[id1], graph.boxes[id2]
+                return box1.x * box2.x
 
 
 
@@ -135,7 +146,6 @@ if __name__ == "__main__":
 
     # Get input data
     input_data = get_list_from_file(8, 2025)
-    # input_data = ['162,817,812', '57,618,57', '906,360,560', '592,479,940', '352,342,300', '466,668,158', '542,29,236', '431,825,988', '739,650,466', '52,470,668', '216,146,977', '819,987,18', '117,168,530', '805,96,715', '346,949,466', '970,615,88', '941,993,340', '862,61,35', '984,92,344', '425,690,689']
 
     # Get solutions
     print(f"Part 1 = {part_one(input_data)}")

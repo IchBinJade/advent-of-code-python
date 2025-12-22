@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (7.5/12)
+[2025](#2025) - In Progress (8/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -46,7 +46,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 **[Day 07](/2025/day07.py) - Part 1 & 2:** BFS a grid to trace downward beams and count of splits.  Pt2 Recursive DFS to find total combo of paths, utilising cache/memoization.
 
-[Day 08](/2025/day08.py) - Part 1: Disjointed union set and modified Kruskal's algorithm on a graph object. TODO: Part 2.
+**[Day 08](/2025/day08.py) - Part 1 & 2:** Disjointed union set and modified Kruskal's algorithm on a graph object. Pt2 Minimum Spanning Tree.
 
 </details>
 
