@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (9/12)
+[2025](#2025) - In Progress (9.5/12)
 
 [2024](#2024) - Complete! (25/25)
 
@@ -49,6 +49,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 **[Day 08](/2025/day08.py) - Part 1 & 2:** Disjointed union set and modified Kruskal's algorithm on a graph object. Pt2 Minimum Spanning Tree.
 
 **[Day 09](/2025/day09.py) - Part 1 & 2:** Combinations of coords to find largest rectangle. Then a beast of a part 2 with modified Point(shape) in Polygon logic.
+
+[Day 10](/2025/day10.py) - Part 1: LightSystem objects using BFS to find smallest count of required button presses.
 
 </details>
 
