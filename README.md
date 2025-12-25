@@ -6,9 +6,9 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (9.5/12)
+[2025](#2025) - In Progress (10/12)
 
-[2024](#2024) - Complete! (25/25)
+**[2024](#2024) - Complete! (25/25)**
 
 [2023](#2023) - In Progress (12/25)
 
@@ -26,7 +26,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 [2016](#2016) - In Progress (18.5/25)
 
-[2015](#2015) - Complete! (25/25)
+**[2015](#2015) - Complete! (25/25)**
 
 ## 2025
 
@@ -50,7 +50,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 **[Day 09](/2025/day09.py) - Part 1 & 2:** Combinations of coords to find largest rectangle. Then a beast of a part 2 with modified Point(shape) in Polygon logic.
 
-[Day 10](/2025/day10.py) - Part 1: LightSystem objects using BFS to find smallest count of required button presses.
+**[Day 10](/2025/day10.py) - Part 1 & 2:** LightSystem objects using BFS to find smallest count of required button presses. Pt2 introduced [Z3](https://z3prover.github.io/api/html/z3.z3.html) theorem prover library!
 
 </details>
 
