@@ -6,7 +6,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## Years
 
-[2025](#2025) - In Progress (11/12)
+**[2025](#2025) - Complete! (12/12)**
 
 **[2024](#2024) - Complete! (25/25)**
 
@@ -30,7 +30,7 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 
 ## 2025
 
-<details open>
+<details>
 
 **[Day 01](/2025/day01.py) - Part 1 & 2:** Double Linked List "Dial" movements
 
@@ -53,6 +53,8 @@ Where possible, I've tried to include a one-line summary of the logic, algorithm
 **[Day 10](/2025/day10.py) - Part 1 & 2:** LightSystem objects using BFS to find smallest count of required button presses. Pt2 introduced [Z3](https://z3prover.github.io/api/html/z3.z3.html) theorem prover library!
 
 **[Day 11](/2025/day11.py) - Part 1 & 2:** BFS on a dictionary of nodes, with lists of linked nodes. Pt2 introduced waypoints that had to be part of the path so used path multiplication and memoization.
+
+**[Day 12](/2025/day12.py):** Tile packing with geometric/maths heuristics.
 
 </details>
 
